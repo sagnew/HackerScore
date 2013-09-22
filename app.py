@@ -4,7 +4,7 @@ from flask import request
 from flask import redirect
 import os
 
-import db_utils
+#import db_utils
 
 app = Flask(__name__)
 
@@ -13,7 +13,7 @@ def main_page():
     return render_template('index.html')
 
 @app.route('/getscore', methods=['POST'])
-def register():
+def get_score():
     username = request.form['username']
     github_id = request.form['github_id']
     stackoverflow_id = request.form['stackoverflow_id']
@@ -26,7 +26,7 @@ def register():
         'hackernews_id': hackernews_id,
         'score': score
     }
-    db_utils.insert_into_db(user_dict)
+    #db_utils.insert_into_db(user_dict)
 
     return render_template('score.html', user_dict=user_dict, score=score)
 

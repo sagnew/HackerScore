@@ -23,5 +23,3 @@ def calculate_score(github_id=None, stackoverflow_id=None, hn_id=None):
 
     score = contributions*2 + reputation*2 + karma*2
     return score
-
-print calculate_score('theycallmeswift', "385913", 'swift')
