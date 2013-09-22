@@ -15,7 +15,7 @@ def calculate_score(github_id=None, stackoverflow_id=None, hn_id=None):
     if hn_id:
         karma = hn_utils.get_karma(hn_id)
     else:
-        hn_id = 0
+        karma = 0
 
     contributions = len(str(contributions))*int(str(contributions)[0])
     reputation = len(str(reputation))*int(str(reputation)[0])
