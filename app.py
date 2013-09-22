@@ -12,13 +12,13 @@ app = Flask(__name__)
 def main_page():
     return render_template('index.html')
 
-@app.route('/register', methods=['POST'])
+@app.route('/getscore', methods=['POST'])
 def register():
     username = request.form['username']
     github_id = request.form['github_id']
     stackoverflow_id = request.form['stackoverflow_id']
     hackernews_id = request.form['hackernews_id']
-    score = 0
+    score = calculate_score()
     user_dict = {
         'username': username,
         'github_id': github_id,
@@ -28,7 +28,7 @@ def register():
     }
     db_utils.insert_into_db(user_dict)
 
-    return render_template('score.html', user_dict=user_dict)
+    return render_template('score.html', user_dict=user_dict, score=score)
 
 if __name__ == '__main__':
     port = int(os.environ.get("PORT",5000))

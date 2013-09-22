@@ -8,5 +8,3 @@ def get_karma(user):
     search = urllib.urlopen(url + user)
     dict = simplejson.loads(search.read())
     return int(dict['karma'])
-
-print get_karma('sagnewshreds')
