@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+        <title>HackerScore</title>
+
+        <link rel="stylesheet" href="static/css/bootstrap.css" type="text/css" media="screen" title="master" charset="utf-8">
+        <link rel="stylesheet" href="static/css/style.css" type="text/css">
+    </head>
+
+    <body>
+        {% block content %}
+        <div class="container">
+
+            <div class="row">
+                <div id="logodiv" class="span8 offset2" align="center"/>
+                    <img src="/static/imgs/logo.png" alt="Git Rumble">
+                </div>
+            </div>
+            <br>
+            <div class="row" align="center">
+                <h2> Enter your information below to determine your influence on the developer community</h2>
+            </div>
+            <div class="row" id="options" align="center">
+                <div id='user_input' class='custom-hero offset4 span4'>
+                    <form method="POST" action="/getscore">
+                        <div class="row prompt">
+                            <input type="text" name="username"  id="username" placeholder="Your name">
+                        </div>
+                        <div class="row prompt">
+                            <input type="text"  name="github_id" id="github_id" placeholder="Github username">
+                        </div>
+                        <div class="row prompt">
+                            <input type="text" name="hn_id"  id="hn_is" placeholder="Hackernews username">
+                        </div>
+                        <div class="row prompt">
+                            <input type="text" name="stackoverflow_id"  id="stackoverflow_id" placeholder="Stackoverflow ID">
+                        </div>
+                        <button type='submit' class='button'>Find out your HackerScore</button>
+                    </form>
+                </div>
+            </div>
+
+            <br>
+            <div class="row" id="credits" align="center">
+                <p>
+                By <a href="http://github.com/sagnew">Sam Agnew</a>
+                <br>
+                <a href="https://github.com/sagnew/HackerScore">View source on Github</a>
+                </p>
+            </div>
+
+        </div>
+        {% endblock %}
+    </body>
+</html>
