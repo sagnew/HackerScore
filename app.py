@@ -18,11 +18,13 @@ def register():
     github_id = request.form['github_id']
     stackoverflow_id = request.form['stackoverflow_id']
     hackernews_id = request.form['hackernews_id']
+    score = 0
     user_dict = {
         'username': username,
         'github_id': github_id,
         'stackoverflow_id': stackoverflow_id,
-        'hackernews_id': hackernews_id
+        'hackernews_id': hackernews_id,
+        'score': score
     }
     db_utils.insert_into_db(user_dict)
 
