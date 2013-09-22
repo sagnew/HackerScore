@@ -15,5 +15,3 @@ def get_public_contributions(user):
         numbers = items.split();
         public_contributions = numbers[0]
     return int(public_contributions)
-
-print get_public_contributions("sagnew")
