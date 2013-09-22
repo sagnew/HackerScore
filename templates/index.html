@@ -24,7 +24,7 @@
             </div>
             <div class="row" id="options" align="center">
                 <div id='user_input' class='custom-hero offset4 span4'>
-                    <form method="POST" action="/getscore">
+                    <form method="POST" action='/getscore'>
                         <div class="row prompt">
                             <input type="text" name="username"  id="username" placeholder="Your name">
                         </div>
@@ -32,12 +32,14 @@
                             <input type="text"  name="github_id" id="github_id" placeholder="Github username">
                         </div>
                         <div class="row prompt">
-                            <input type="text" name="hn_id"  id="hn_is" placeholder="Hackernews username">
+                            <input type="text" name="hackernews_id"  id="hackernews_is" placeholder="Hackernews username">
                         </div>
                         <div class="row prompt">
                             <input type="text" name="stackoverflow_id"  id="stackoverflow_id" placeholder="Stackoverflow ID">
                         </div>
-                        <button type='submit' class='button'>Find out your HackerScore</button>
+                        <div class="row">
+                            <button type='submit' class='button'>Find out your HackerScore</button>
+                        </div>
                     </form>
                 </div>
             </div>
