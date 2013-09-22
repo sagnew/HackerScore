@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+        <title>HackerScore</title>
+
+        <link rel="stylesheet" href="static/css/bootstrap.css" type="text/css" media="screen" title="master" charset="utf-8">
+        <link rel="stylesheet" href="static/css/style.css" type="text/css">
+    </head>
+
+    <body>
+        {% block content %}
+        <div class="container">
+
+            <div class="row">
+                <div id="logodiv" class="span8 offset2" align="center"/>
+                    <img src="/static/imgs/logo.png" alt="Git Rumble">
+                </div>
+            </div>
+            <div class="row custom-hero" id="options" align="center">
+                <div id='stats' class='custom-hero span5'>
+                    <h2> {{user_dict['username']}}'s HackerScore:</h2>
+                </div>
+                <div class="row">
+                    <div class="offset4 span4">
+                        <h2>{{ score }}</h2>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <div class="row" id="credits" align="center">
+                <p>
+                By <a href="http://github.com/sagnew">Sam Agnew</a>
+                <br>
+                <a href="https://github.com/sagnew/HackerScore">View source on Github</a>
+                </p>
+            </div>
+
+        </div>
+        {% endblock %}
+    </body>
+</html>
