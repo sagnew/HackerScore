@@ -7,4 +7,7 @@ def get_karma(user):
     url = "http://api.thriftdb.com/api.hnsearch.com/users/"
     search = urllib.urlopen(url + user)
     dict = simplejson.loads(search.read())
-    return int(dict['karma'])
+    if 'karma' in dict.keys():
+        return int(dict['karma'])
+    else:
+        return 0
